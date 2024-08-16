@@ -44,4 +44,36 @@ I hope these workflows or plug-ins can really help you.
 ## 🧩安装指南
 如果ComfyUI安装了过多组件,可能会出现环境冲突等问题。推荐使用Anaconda创建虚拟环境来运行ComfyUI,避免潜在的冲突。就算你的虚拟环境也装的太多了，引起了冲突，你还可以再创建一个虚拟环境来专门运行起你现在很需要运行起来的工作流。具体可以参考一下这份指南（如果有什么错误的地方欢迎大家批评指正）:[Windows环境下ComfyUI自定义节点安装指南](./Windows环境下ComfyUI自定义节点安装指南.md)
 
+# 有关AIGC的一些前沿技术和资源
 
+## 🧠LLM赋能、语义理解、检测、分割、描述（caption）
+
+| [Omost](https://github.com/lllyasviel/Omost)<br>![GitHub Repo stars](https://img.shields.io/github/stars/lllyasviel/Omost)  | {LLM赋能SD}将LLM的编码能力转换为图像生成（或更准确地说，图像组合）能力，[Omost demo](https://huggingface.co/spaces/lllyasviel/Omost) | [ComfyUI_omost](https://github.com/huchenlei/ComfyUI_omost)<br>![GitHub Repo stars](https://img.shields.io/github/stars/huchenlei/ComfyUI_omost)<br>  |
+| :------------------------------------------------------------: | :-----------------------------------: | :---------------------: |
+| [ELLA](https://github.com/TencentQQGYLab/ELLA)<br>![GitHub Repo stars](https://img.shields.io/github/stars/TencentQQGYLab/ELLA)<br> | 【语义理解】让大语言模型LLM赋能AI绘画                                                                                 | [ComfyUI_ELLA](https://github.com/ExponentialML/ComfyUI_ELLA)<br>![GitHub Repo stars](https://img.shields.io/github/stars/ExponentialML/ComfyUI_ELLA)<br>                           |
+| [DenseDiffusion](https://github.com/naver-ai/DenseDiffusion)<br>![GitHub Repo stars](https://img.shields.io/github/stars/naver-ai/DenseDiffusion)<br>                             | 【语义理解、解构画面】处理密集提示词，即插即用                                                                               | [ComfyUI_densediffusion](https://github.com/huchenlei/ComfyUI_densediffusion)<br>![GitHub Repo stars](https://img.shields.io/github/stars/huchenlei/ComfyUI_densediffusion)<br>     |
+| [florence-2](https://clarifai.com/microsoft/florence/models/florence-2-large)                                                                                                     | 【检测、分割、描述】微软免费                                                                                        | [ComfyUI-Florence2](https://github.com/kijai/ComfyUI-Florence2)<br>![GitHub Repo stars](https://img.shields.io/github/stars/kijai/ComfyUI-Florence2)                                |
+| [segment-anything-2](https://github.com/facebookresearch/segment-anything-2)<br>![GitHub Repo stars](https://img.shields.io/github/stars/facebookresearch/segment-anything-2)<br> | 【检测、分割】Meta出品 |[ComfyUI-segment-anything-2](https://github.com/kijai/ComfyUI-segment-anything-2)<br>![GitHub Repo stars](https://img.shields.io/github/stars/kijai/ComfyUI-segment-anything-2)<br> |
+
+## ![替代文本](https://ollama.com/public/icon-32x32.png)[Ollama语言模型下载](https://ollama.com/)
+### 一个拥有解析图片和语言模型的网站，根据需要和自己电脑的硬件条件下载对应的模型，也可以进入对应的github网站:[Ollama](https://github.com/ollama/ollama)
+以下是一些可供下载的示例模型(部分)：
+Here are some example models that can be downloaded:
+| Model              | Parameters | Size  | Download                       |
+| ------------------ | ---------- | ----- | ------------------------------ |
+| Llama 3.1          | 8B         | 4.7GB | `ollama run llama3.1`          |
+| Llama 3.1          | 70B        | 40GB  | `ollama run llama3.1:70b`      |
+| Llama 3.1          | 405B       | 231GB | `ollama run llama3.1:405b`     |
+| Phi 3 Mini         | 3.8B       | 2.3GB | `ollama run phi3`              |
+| Phi 3 Medium       | 14B        | 7.9GB | `ollama run phi3:medium`       |
+| Gemma 2            | 2B         | 1.6GB | `ollama run gemma2:2b`         |
+| Gemma 2            | 9B         | 5.5GB | `ollama run gemma2`            |
+| Gemma 2            | 27B        | 16GB  | `ollama run gemma2:27b`        |
+| Mistral            | 7B         | 4.1GB | `ollama run mistral`           |
+| Moondream 2        | 1.4B       | 829MB | `ollama run moondream`         |
+| Neural Chat        | 7B         | 4.1GB | `ollama run neural-chat`       |
+| Starling           | 7B         | 4.1GB | `ollama run starling-lm`       |
+| Code Llama         | 7B         | 3.8GB | `ollama run codellama`         |
+| Llama 2 Uncensored | 7B         | 3.8GB | `ollama run llama2-uncensored` |
+| LLaVA              | 7B         | 4.5GB | `ollama run llava`             |
+| Solar              | 10.7B      | 6.1GB | `ollama run solar`             |
