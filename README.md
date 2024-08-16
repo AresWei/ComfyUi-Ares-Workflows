@@ -42,4 +42,6 @@ I hope these workflows or plug-ins can really help you.
 | [ComfyUI_Fill-Nodes](https://github.com/filliptm/ComfyUI_Fill-Nodes)<br>![GitHub Repo stars](https://img.shields.io/github/stars/filliptm/ComfyUI_Fill-Nodes)<br>   | 按顺序（每次渲染时）或随机（也是每次渲染时）提取图像。 |
 
 ## 🧩安装指南
-如果ComfyUI安装了过多组件,可能会出现环境冲突等问题。推荐使用Anaconda创建虚拟环境来运行ComfyUI,避免潜在的冲突。就算你的虚拟环境也装的太多了，引起了冲突，你还可以再创建一个虚拟环境来专门运行起你现在很需要运行起来的工作流。具体可以参考一下这份指南:
+如果ComfyUI安装了过多组件,可能会出现环境冲突等问题。推荐使用Anaconda创建虚拟环境来运行ComfyUI,避免潜在的冲突。就算你的虚拟环境也装的太多了，引起了冲突，你还可以再创建一个虚拟环境来专门运行起你现在很需要运行起来的工作流。具体可以参考一下这份指南（如果有什么错误的地方欢迎大家批评指正）:[Windows环境下ComfyUI自定义节点安装指南](./Windows环境下ComfyUI自定义节点安装指南.md)
+
+
