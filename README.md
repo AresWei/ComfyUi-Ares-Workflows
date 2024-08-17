@@ -6,10 +6,10 @@
 # 🌲项目介绍
 
 This is the workflow I used when I was studying ComfyUi and actually doing commercial applications. Some of them were shared by others, some were built by myself, and some were adjusted according to existing workflows... There are also some plug-ins and related applications related to ComfyUI, etc.
-I hope these workflows or plug-ins can really help you.
+I hope these workflows or plug-ins can really help you(under continuous improvement).
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 这是我在学习 ComfyUi 和实际做商业应用和项目时所用的工作流程，还有一些与 ComfyUI 相关的插件和相关应用等等；
-希望这些工作流程或插件能真正帮到你。
+希望这些工作流程或插件能真正帮到你(在不断完善中……)
 -
 # 🚄ComfyUI相关资源链接直达快车
 
