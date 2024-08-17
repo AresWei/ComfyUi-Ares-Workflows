@@ -44,6 +44,12 @@ I hope these workflows or plug-ins can really help you.
 ## 🧩安装指南
 如果ComfyUI安装了过多组件,可能会出现环境冲突等问题。推荐使用Anaconda创建虚拟环境来运行ComfyUI,避免潜在的冲突。就算你的虚拟环境也装的太多了，引起了冲突，你还可以再创建一个虚拟环境来专门运行起你现在很需要运行起来的工作流。具体可以参考一下这份指南（如果有什么错误的地方欢迎大家批评指正）:[Windows环境下ComfyUI自定义节点安装指南](./Windows环境下ComfyUI自定义节点安装指南.md)
 
+## ComfyUI的控制模型Controlnet（补充中）
+1.[xinsir-sdxl](https://huggingface.co/xinsir)<br>
+2.[lllyasviel大合集,常用的CN模型](https://huggingface.co/lllyasviel/sd_control_collection/tree/main)<br>
+3.[好用的线稿模型-MistoLine](https://github.com/TheMistoAI/MistoLine)<br>
+4.[InstantX-SD3-Controlnet](https://huggingface.co/InstantX)<br>
+
 # 有关AIGC的一些前沿技术和资源
 
 ## 🧠LLM赋能、语义理解、检测、分割、描述（caption）
@@ -56,7 +62,8 @@ I hope these workflows or plug-ins can really help you.
 | [segment-anything-2](https://github.com/facebookresearch/segment-anything-2)<br>![GitHub Repo stars](https://img.shields.io/github/stars/facebookresearch/segment-anything-2)<br> | 【检测、分割】Meta出品 |[ComfyUI-segment-anything-2](https://github.com/kijai/ComfyUI-segment-anything-2)<br>![GitHub Repo stars](https://img.shields.io/github/stars/kijai/ComfyUI-segment-anything-2)<br> |
 
 ## ![替代文本](https://ollama.com/public/icon-32x32.png)[Ollama语言模型下载](https://ollama.com/)
-### 一个拥有解析图片和语言模型的网站，根据需要和自己电脑的硬件条件下载对应的模型，也可以进入对应的github网站:[Ollama](https://github.com/ollama/ollama)
+### 一个拥有解析图片和语言模型的网站，根据需要和自己电脑的硬件条件下载对应的模型，也可以进入对应的github网站:[Ollama](https://github.com/ollama/ollama)<br>
+#### 具体的安装步骤，也可看Ollama的教程，跟着一步一步做；
 以下是一些可供下载的示例模型(部分)：
 Here are some example models that can be downloaded:
 | Model              | Parameters | Size  | Download                       |
@@ -79,4 +86,19 @@ Here are some example models that can be downloaded:
 | Solar              | 10.7B      | 6.1GB | `ollama run solar`             |
 
 > [!NOTE]
-> You should have at least 8 GB of RAM available to run the 7B models, 16 GB to run the 13B models, and 32 GB to run the 33B models.
+> You should have at least 8 GB of RAM available to run the 7B models, 16 GB to run the 13B models, and 32 GB to run the 33B models.<br>
+> 您应该至少有 8 GB 的 RAM 来运行 7B 型号，16 GB 的 RAM 来运行 13B 型号，32 GB 的 RAM 来运行 33B 型号。<br>
+> **请大家量力而行，显存大的肯定好，结合自己的电脑硬件条件选择适合的模型下载，后续如果大家需要，我也会分享一下如何使用云机器或者云服务器进行部署(💰这个是需要付费的！！！)**
+
+## 动画及数字人技术和资源
+
+| 项目名称及网址                         | 介绍                                   | ComfyUI实现/视频介绍                                            |
+| :---------------------------------: | :-----------------------------------: | :--------------------------------------------------------------: |
+| [LivePortrait](https://github.com/KwaiVGI/LivePortrait)<br>[GitHub Repo stars](https://img.shields.io/github/stars/KwaiVGI/LivePortrait)  | 【动画】高效的肖像动画 - 结合缝合和重定向控制 | ![GitHub Repo stars](https://img.shields.io/github/stars/kijai/ComfyUI-LivePortraitKJ)<br>[ComfyUI-LivePortraitKJ](https://github.com/kijai/ComfyUI-LivePortraitKJ)   |
+| [ToonCrafter](https://github.com/ToonCrafter/ToonCrafter)<br>![GitHub Repo stars](https://img.shields.io/github/stars/ToonCrafter/ToonCrafter)<br><br>   | 【动画】生成卡通动画差值，看上去很丝滑，[ToonCrafter-for-windows](https://github.com/sdbds/ToonCrafter-for-windows) | [ComfyUI-ToonCrafter](https://github.com/AIGODLIKE/ComfyUI-ToonCrafter)<br>![GitHub Repo stars](https://img.shields.io/github/stars/AIGODLIKE/ComfyUI-ToonCrafter)<br><br>   |
+| [hallo](https://github.com/fudan-generative-vision/hallo)<br>![GitHub Repo stars](https://img.shields.io/github/stars/fudan-generative-vision/hallo)<br> | 【数字人】音频驱动肖像，复旦大学、百度、南京大学                | 系统需求：Ubuntu 20.04/Ubuntu 22.04, Cuda 12.1  |
+| [MimicMotion](https://github.com/Tencent/MimicMotion)<br>![GitHub Repo stars](https://img.shields.io/github/stars/Tencent/MimicMotion)<br>               | 【动画】基于置信度感知姿态引导的高质量人体运动视频生成| [ComfyUI-MimicMotionWrapper](https://github.com/kijai/ComfyUI-MimicMotionWrapper)![GitHub Repo stars](https://img.shields.io/github/stars/kijai/ComfyUI-MimicMotionWrapper)<br> |
+| [champ](https://github.com/fudan-generative-vision/champ)<br>![GitHub Repo stars](https://img.shields.io/github/stars/fudan-generative-vision/champ)<br> | 【动画、视频】通过3D参数引导的可控且一致的人像动画，这项目用到了Blender！  | [ComfyUI-champWrapper](https://github.com/kijai/ComfyUI-champWrapper)<br>![GitHub Repo stars](https://img.shields.io/github/stars/kijai/ComfyUI-champWrapper)<br>         |
+| [EchoMimic](https://github.com/BadToBest/EchoMimic)<br>![GitHub Repo stars](https://img.shields.io/github/stars/BadToBest/EchoMimic)<br>     | 【声音驱动肖像】阿里开源    | [ComfyUI_EchoMimic](https://github.com/smthemex/ComfyUI_EchoMimic)  |
+
+## 
