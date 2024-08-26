@@ -11,6 +11,11 @@ I hope these workflows or plug-ins can really help you(under continuous improvem
 这是我在学习 ComfyUi 和实际做商业应用和项目时所用的工作流程，还有一些与 ComfyUI 相关的插件和相关应用等等；
 希望这些工作流程或插件能真正帮到你(在不断完善中……)
 -
+
+# 😊这个是我自己学习Comfyui整理出来的知识点和教程，在不断完善中……（如果有特别想要学习的知识也可以留个言，我优先做出来）
+# 😃This is the knowledge points and tutorials I compiled by myself while learning Comfyui, which are constantly being improved... (If there is any knowledge you want to learn, you can also leave a message and I will give priority to it)
+
+👍👉[ComfyUI Learning by AresWei](https://www.notion.so/8365af0d4c3b486985f98947d83f1391?v=fc417080f6ae40ff80de338f958a5b50&pvs=4)
 # 🚄ComfyUI相关资源链接直达快车
 
 | ComfyUI官方的连接 | 相关模型资源 | 参考画廊及提示词(部分)  | 工作流学习下载地址 |
