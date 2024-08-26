@@ -12,10 +12,11 @@ I hope these workflows or plug-ins can really help you(under continuous improvem
 希望这些工作流程或插件能真正帮到你(在不断完善中……)
 -
 
-# 😊这个是我自己学习Comfyui整理出来的知识点和教程，在不断完善中……（如果有特别想要学习的知识也可以留个言，我优先做出来）
-# 😃This is the knowledge points and tutorials I compiled by myself while learning Comfyui, which are constantly being improved... (If there is any knowledge you want to learn, you can also leave a message and I will give priority to it)
+### 😊首先第一个资源：这个是我自己学习Comfyui整理出来的知识点和教程，在不断完善中……（如果有特别想要学习的知识也可以留个言，我优先做出来），链接在下面
+😃This is the knowledge points and tutorials I compiled by myself while learning Comfyui, which are constantly being improved... (If there is any knowledge you want to learn, you can also leave a message and I will give priority to it)<br>
 
-👍👉[ComfyUI Learning by AresWei](https://www.notion.so/8365af0d4c3b486985f98947d83f1391?v=fc417080f6ae40ff80de338f958a5b50&pvs=4)
+👍👉[ComfyUI Learning by AresWei](https://www.notion.so/8365af0d4c3b486985f98947d83f1391?v=fc417080f6ae40ff80de338f958a5b50&pvs=4)<br>
+
 # 🚄ComfyUI相关资源链接直达快车
 
 | ComfyUI官方的连接 | 相关模型资源 | 参考画廊及提示词(部分)  | 工作流学习下载地址 |
@@ -190,6 +191,10 @@ Here are some example models that can be downloaded:
 | [TencentARC](https://github.com/TencentARC)<br>腾讯             | [PhotoMaker](https://github.com/TencentARC/PhotoMaker)<br>[T2I-Adapter](https://github.com/TencentARC/T2I-Adapter)<br>[BrushNet](https://github.com/TencentARC/BrushNet)局部重绘很顶！                                                                                                                                                                                                                      |
 
 <br>
+
+### 对模型训练的数据集处理或者清理以及其他一些自己用的小脚本小工具的链接也一并分享出来给大家~
+Links to data set processing or cleaning for model training and other small script tools for your own use are also shared with everyone~
+[Automated-scripts-and-processes-for-diffusion-models](https://github.com/AresWei/Automated-scripts-and-processes-for-diffusion-models)
 
 #### ⭐最后，希望这些能够帮助到你⭐
 #### ⭐具体的框架和资源也在不断完善当中⭐
