@@ -1,0 +1,1126 @@
+{
+  "last_node_id": 148,
+  "last_link_id": 259,
+  "nodes": [
+    {
+      "id": 66,
+      "type": "Cfg Literal",
+      "pos": {
+        "0": 50,
+        "1": 1370
+      },
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            112
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "FLOAT"
+        }
+      ],
+      "title": "Face Detail cfg",
+      "properties": {
+        "Node name for S&R": "Cfg Literal"
+      },
+      "widgets_values": [
+        4
+      ],
+      "color": "#86103b",
+      "bgcolor": "#9a244f"
+    },
+    {
+      "id": 98,
+      "type": "Seed Generator",
+      "pos": {
+        "0": 2205.831298828125,
+        "1": 1333.7730712890625
+      },
+      "size": {
+        "0": 315,
+        "1": 82
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            160
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "INT"
+        }
+      ],
+      "title": "Face Detail Seed",
+      "properties": {
+        "Node name for S&R": "Seed Generator"
+      },
+      "widgets_values": [
+        3252,
+        "fixed"
+      ],
+      "color": "#86103b",
+      "bgcolor": "#9a244f"
+    },
+    {
+      "id": 137,
+      "type": "Note",
+      "pos": {
+        "0": 2210,
+        "1": 1470
+      },
+      "size": {
+        "0": 310,
+        "1": 400
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Makeup Layers refers to the number of times the detailer layers your makeup.  Four is a good starting point.\n\nKeep in mind that the more layers you use, the more the face will drift from true.\n\nChange the seed for slightly different makeup styling.\n\n"
+      ],
+      "color": "#a51949",
+      "bgcolor": "#b92d5d"
+    },
+    {
+      "id": 138,
+      "type": "Note",
+      "pos": {
+        "0": 50,
+        "1": 1490
+      },
+      "size": {
+        "0": 310,
+        "1": 400
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "The secret of this workflow is that we're using very low step and cfg setting, but we're repeating it multiple times.  This allows us to layer on makeup without the face drifting too far from the original.  There will always be some drift, however.\n\n"
+      ],
+      "color": "#a51949",
+      "bgcolor": "#b92d5d"
+    },
+    {
+      "id": 142,
+      "type": "Int",
+      "pos": {
+        "0": 2201,
+        "1": 1229
+      },
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            247
+          ],
+          "shape": 3,
+          "label": "整数"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Int"
+      },
+      "widgets_values": [
+        "1"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "CheckpointLoaderSimple",
+      "pos": {
+        "0": 996,
+        "1": 907
+      },
+      "size": {
+        "0": 510,
+        "1": 100
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            228
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "模型"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            232,
+            235,
+            237
+          ],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            26
+          ],
+          "slot_index": 2,
+          "shape": 3,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "AWPainting_v1.2.safetensors"
+      ],
+      "color": "#280007",
+      "bgcolor": "#3c081b"
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": {
+        "0": 900,
+        "1": 1180
+      },
+      "size": {
+        "0": 620,
+        "1": 600
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            56
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3,
+          "label": "遮罩"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "AresWei_full_body_3d_illustration_of_a_girl_wearing_a_light_yel_71f9ff99-12f3-40e0-8b64-5bd1ceda4baf.png",
+        "image"
+      ],
+      "color": "#5b6200",
+      "bgcolor": "#6f7608"
+    },
+    {
+      "id": 134,
+      "type": "PreviewImage",
+      "pos": {
+        "0": 1541,
+        "1": 1176
+      },
+      "size": {
+        "0": 620,
+        "1": 610
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 224,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 59,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1598,
+        "1": 1884
+      },
+      "size": {
+        "0": 600,
+        "1": 590
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 168,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "makeup"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 22,
+      "type": "UltralyticsDetectorProvider",
+      "pos": {
+        "0": 45,
+        "1": 992
+      },
+      "size": {
+        "0": 320,
+        "1": 80
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            186
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "BBox检测"
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": [],
+          "slot_index": 1,
+          "shape": 3,
+          "label": "SEGM检测"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "bbox/face_yolov8m.pt"
+      ],
+      "color": "#86103b",
+      "bgcolor": "#9a244f"
+    },
+    {
+      "id": 23,
+      "type": "SAMLoader",
+      "pos": {
+        "0": 44,
+        "1": 1117
+      },
+      "size": {
+        "0": 320,
+        "1": 82
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAM_MODEL",
+          "type": "SAM_MODEL",
+          "links": [
+            184
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "SAM模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMLoader"
+      },
+      "widgets_values": [
+        "sam_vit_b_01ec64.pth",
+        "Prefer GPU"
+      ],
+      "color": "#86103b",
+      "bgcolor": "#9a244f"
+    },
+    {
+      "id": 135,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 2201,
+        "1": 914
+      },
+      "size": {
+        "0": 350,
+        "1": 220
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 235,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            240
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "",
+        true
+      ],
+      "color": "#6f0000",
+      "bgcolor": "#831100"
+    },
+    {
+      "id": 65,
+      "type": "Int Literal",
+      "pos": {
+        "0": 50,
+        "1": 1260
+      },
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            111
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "INT"
+        }
+      ],
+      "title": "Face Detail Steps",
+      "properties": {
+        "Node name for S&R": "Int Literal"
+      },
+      "widgets_values": [
+        4
+      ],
+      "color": "#86103b",
+      "bgcolor": "#9a244f"
+    },
+    {
+      "id": 21,
+      "type": "FaceDetailer",
+      "pos": {
+        "0": 402,
+        "1": 883
+      },
+      "size": {
+        "0": 466.6800231933594,
+        "1": 1223.51416015625
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 56,
+          "label": "图像"
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 228,
+          "label": "模型"
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 232,
+          "label": "CLIP"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 26,
+          "label": "VAE"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 239,
+          "label": "正面条件"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 240,
+          "label": "负面条件"
+        },
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 186,
+          "label": "BBox检测"
+        },
+        {
+          "name": "sam_model_opt",
+          "type": "SAM_MODEL",
+          "link": 184,
+          "label": "SAM模型"
+        },
+        {
+          "name": "segm_detector_opt",
+          "type": "SEGM_DETECTOR",
+          "link": null,
+          "label": "Segm检测"
+        },
+        {
+          "name": "detailer_hook",
+          "type": "DETAILER_HOOK",
+          "link": null,
+          "label": "细化约束"
+        },
+        {
+          "name": "sampler_name",
+          "type": "COMBO",
+          "link": 79,
+          "widget": {
+            "name": "sampler_name"
+          },
+          "label": "采样器"
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 111,
+          "widget": {
+            "name": "steps"
+          },
+          "label": "步数"
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 112,
+          "widget": {
+            "name": "cfg"
+          },
+          "label": "CFG"
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 160,
+          "widget": {
+            "name": "seed"
+          },
+          "label": "随机种"
+        },
+        {
+          "name": "cycle",
+          "type": "INT",
+          "link": 247,
+          "widget": {
+            "name": "cycle"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            224,
+            230
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "图像"
+        },
+        {
+          "name": "cropped_refined",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 1,
+          "shape": 6,
+          "label": "细化图像"
+        },
+        {
+          "name": "cropped_enhanced_alpha",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 2,
+          "shape": 6,
+          "label": "细化部分"
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 3,
+          "shape": 3,
+          "label": "遮罩"
+        },
+        {
+          "name": "detailer_pipe",
+          "type": "DETAILER_PIPE",
+          "links": null,
+          "shape": 3,
+          "label": "细化节点束"
+        },
+        {
+          "name": "cnet_images",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 6,
+          "label": "ControlNet图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FaceDetailer"
+      },
+      "widgets_values": [
+        512,
+        true,
+        768,
+        1052570527455683,
+        "fixed",
+        14,
+        4,
+        "euler_ancestral",
+        "karras",
+        0.3,
+        5,
+        true,
+        true,
+        0.5,
+        10,
+        3,
+        "center-1",
+        0,
+        0.93,
+        6,
+        0.7,
+        "False",
+        10,
+        "",
+        1,
+        false,
+        20,
+        true
+      ],
+      "color": "#86103b",
+      "bgcolor": "#9a244f"
+    },
+    {
+      "id": 52,
+      "type": "Sampler Selector",
+      "pos": {
+        "0": 996.013427734375,
+        "1": 1046.5240478515625
+      },
+      "size": {
+        "0": 270,
+        "1": 60
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "sampler_name",
+          "type": "COMBO",
+          "links": [
+            79
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "sampler_name"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Sampler Selector"
+      },
+      "widgets_values": [
+        "euler_ancestral"
+      ],
+      "color": "#280007",
+      "bgcolor": "#3c081b"
+    },
+    {
+      "id": 105,
+      "type": "Reroute",
+      "pos": {
+        "0": 1447,
+        "1": 1898
+      },
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 259
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            168
+          ],
+          "slot_index": 0,
+          "label": "Save"
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "showTitle": true
+      },
+      "color": "#122a00",
+      "bgcolor": "#263e0f"
+    },
+    {
+      "id": 104,
+      "type": "Reroute",
+      "pos": {
+        "0": 1319.5067138671875,
+        "1": 1895.444091796875
+      },
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 230
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "IMAGE",
+          "links": [
+            259
+          ],
+          "slot_index": 0,
+          "label": "Final"
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "showTitle": true
+      },
+      "color": "#122a00",
+      "bgcolor": "#263e0f"
+    },
+    {
+      "id": 136,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 1536,
+        "1": 898
+      },
+      "size": {
+        "0": 620,
+        "1": 220
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 237,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            239
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "vibrant purple lipstick, black eyeliner, (purple lips:1.3),8K, UHD",
+        true
+      ],
+      "color": "#3b6614",
+      "bgcolor": "#4f7a28"
+    },
+    {
+      "id": 140,
+      "type": "Note",
+      "pos": {
+        "0": 1202,
+        "1": 2008
+      },
+      "size": {
+        "0": 320,
+        "1": 180
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "如果效果达到你的要求，那么就将Final和Save这两个节点连接起来，从而可以将你的图片进行保存。\nConnect these two nodes when you are ready to save your final image, then just hit Queue again."
+      ],
+      "color": "#122a00",
+      "bgcolor": "#263e0f"
+    },
+    {
+      "id": 112,
+      "type": "Note",
+      "pos": {
+        "0": 2620,
+        "1": 900
+      },
+      "size": {
+        "0": 650,
+        "1": 330
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "在女性面孔上效果最好，这显然是模型的内置偏差。\n复杂的背景会让机器感到困惑。\n雀斑会被粉化。看来机器喜欢厚厚的粉底。\n\nWorks best on female faces, it's apparently a built in bias in the models.\nComplex backgrounds can confuse The Machine.\nFreckles get powdered over. It seems The Machine likes a heavy foundation."
+      ],
+      "color": "#a10600",
+      "bgcolor": "#b51a00"
+    }
+  ],
+  "links": [
+    [
+      26,
+      12,
+      2,
+      21,
+      3,
+      "VAE"
+    ],
+    [
+      56,
+      1,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      79,
+      52,
+      0,
+      21,
+      10,
+      "COMBO"
+    ],
+    [
+      111,
+      65,
+      0,
+      21,
+      11,
+      "INT"
+    ],
+    [
+      112,
+      66,
+      0,
+      21,
+      12,
+      "FLOAT"
+    ],
+    [
+      160,
+      98,
+      0,
+      21,
+      13,
+      "INT"
+    ],
+    [
+      168,
+      105,
+      0,
+      59,
+      0,
+      "IMAGE"
+    ],
+    [
+      184,
+      23,
+      0,
+      21,
+      7,
+      "SAM_MODEL"
+    ],
+    [
+      186,
+      22,
+      0,
+      21,
+      6,
+      "BBOX_DETECTOR"
+    ],
+    [
+      224,
+      21,
+      0,
+      134,
+      0,
+      "IMAGE"
+    ],
+    [
+      228,
+      12,
+      0,
+      21,
+      1,
+      "MODEL"
+    ],
+    [
+      230,
+      21,
+      0,
+      104,
+      0,
+      "*"
+    ],
+    [
+      232,
+      12,
+      1,
+      21,
+      2,
+      "CLIP"
+    ],
+    [
+      235,
+      12,
+      1,
+      135,
+      0,
+      "CLIP"
+    ],
+    [
+      237,
+      12,
+      1,
+      136,
+      0,
+      "CLIP"
+    ],
+    [
+      239,
+      136,
+      0,
+      21,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      240,
+      135,
+      0,
+      21,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      247,
+      142,
+      0,
+      21,
+      14,
+      "INT"
+    ],
+    [
+      259,
+      104,
+      0,
+      105,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "The Makeup Counter",
+      "bounding": [
+        33,
+        801,
+        845,
+        1136
+      ],
+      "color": "#d95d8a",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Save Final",
+      "bounding": [
+        1313,
+        1839,
+        216,
+        121
+      ],
+      "color": "#9dc978",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Initial Choices",
+      "bounding": [
+        984,
+        834,
+        534,
+        291
+      ],
+      "color": "#d95d8a",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Makeup Applicator",
+      "bounding": [
+        2177,
+        1149,
+        364,
+        735
+      ],
+      "color": "#d95d8a",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.49500000000000544,
+      "offset": [
+        111.48959960798076,
+        -759.5241482533751
+      ]
+    },
+    "workspace_info": {
+      "id": "yNYUGdi4_SQU0lfJtKVdc"
+    }
+  },
+  "version": 0.4
+}
